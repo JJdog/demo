@@ -9,7 +9,7 @@ MAINTAINER  zsw
 VOLUME /tmp
 
 EXPOSE 8123
-WORKDIR /home/zsw
+WORKDIR /home
 COPY ${JAR_FILE} app.jar
 
 ENTRYPOINT ["java","-jar","./app.jar"]
