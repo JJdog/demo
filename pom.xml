@@ -39,8 +39,8 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <docker.image.prefix>zhangsw</docker.image.prefix>
-        <docker.registry>registry.cn-shanghai.aliyuncs.com</docker.registry>
+        <!--<docker.image.prefix>zhangsw</docker.image.prefix>-->
+        <!--<docker.registry>192.168.2.6:5000</docker.registry>-->
     </properties>
 
 
@@ -66,7 +66,7 @@
                         </executions>
                         <configuration>
                             <!--这里指定打包镜像的名称${docker.registry}/${docker.image.prefix}/  -->
-                            <repository>test</repository>
+                            <repository>192.168.2.6:5000/springboot-demo</repository>
                             <tag>${project.version}</tag>
                             <!-- 这里是复制 jar 包到 docker 容器指定目录配置 -->
                             <buildArgs>
