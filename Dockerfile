@@ -10,6 +10,6 @@ VOLUME /tmp
 
 EXPOSE 8123
 WORKDIR /home
-COPY ${JAR_FILE} app.jar
+COPY /var/jenkins_home/workspace/zsw-demo/target/demo-0.0.1-SNAPSHOT.jar  /home/app.jar
 
 ENTRYPOINT ["java","-jar","./app.jar"]
