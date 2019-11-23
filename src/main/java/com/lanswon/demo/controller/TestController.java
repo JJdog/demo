@@ -18,4 +18,9 @@ public class TestController {
     public String test(){
         return ".............................................................................................welcome";
     }
+
+    @GetMapping("aa")
+    public String test1(){
+        return "...........fuck       uuuuuuuuu..................................................................................welcome";
+    }
 }
