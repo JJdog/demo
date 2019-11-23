@@ -10,6 +10,6 @@ VOLUME /tmp
 
 EXPOSE 8123
 WORKDIR /home
-ADD ${JAR_FILE}  /app.jar
+ADD ${JAR_FILE} app.jar
 
 # ENTRYPOINT ["java","-jar","./app.jar"]
