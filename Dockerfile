@@ -10,6 +10,9 @@ VOLUME /tmp
 
 EXPOSE 8123
 WORKDIR /home
+
+ARG JAR_FILE
+
 COPY ${JAR_FILE} app.jar
 
 # ENTRYPOINT ["java","-jar","./app.jar"]
