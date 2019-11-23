@@ -9,6 +9,7 @@ MAINTAINER  zsw
 VOLUME /tmp
 
 EXPOSE 8123
+WORKDIR /home
+COPY ./${JAR_FILE} app.jar
 
-
-ENTRYPOINT ["java","-jar","./var/jenkins_home/workspace/zsw-demo/target/demo-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","./app.jar"]
