@@ -69,12 +69,12 @@
                         <configuration>
                             <!--这里指定打包镜像的名称${docker.registry}/${docker.image.prefix}/  -->
                             <repository>192.168.2.6:5000/springboot-demo</repository>
-                            <!--<tag>${project.version}</tag>-->
+                            <tag>${project.version}</tag>
                             <!-- 这里是复制 jar 包到 docker 容器指定目录配置 -->
                             <buildArgs>
 
                                 <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
-                                <aaa>${project.artifactId}</aaa>
+                                <aaa>${project.artifactId}.jar</aaa>
                             </buildArgs>
                             <!--<serverId>docker-aliyun</serverId>-->
                             <!--<pushImage>true</pushImage>-->
