@@ -3,7 +3,7 @@
 # https://hub.docker.com/_/centos?tab=tags 查询版本 ，不加版本就是最新的版本
 FROM registry.cn-shanghai.aliyuncs.com/zhangsw/centos-java:7.4-jdk8u171
 
-# 维护者
+# 维护者虚拟机开机黑屏
 MAINTAINER  zsw
 
 VOLUME /tmp
@@ -17,7 +17,7 @@ RUN mkdir zsw
 ARG JAR_FILE
 ARG aaa
 # jenkins打好的包 复制到 容器内
-COPY ${JAR_FILE}  ${aaa}
+COPY ${JAR_FILE}  demo.jar
 
 #启动jar
-ENTRYPOINT ["java","-jar","./${aaa}"]
+ENTRYPOINT ["java","-jar", "./demo.jar"]
