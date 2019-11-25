@@ -7,12 +7,17 @@ FROM registry.cn-shanghai.aliyuncs.com/zhangsw/centos-java:7.4-jdk8u171
 MAINTAINER  zsw
 
 VOLUME /tmp
-
+# 暴露端口
 EXPOSE 8123
+# 切换当前目录
 WORKDIR /home/
+# 创建目录
 RUN mkdir zsw
+# pom文件里的参数
 ARG JAR_FILE
-COPY ${JAR_FILE} app.jar
+ARG aaa
+# jenkins打好的包 复制到 容器内
+COPY ${JAR_FILE}  ${aaa}
 
-
-ENTRYPOINT ["java","-jar","./app.jar"]
+#启动jar
+ENTRYPOINT ["java","-jar","./${aaa}"]
