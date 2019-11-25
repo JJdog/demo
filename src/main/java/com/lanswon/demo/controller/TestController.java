@@ -32,4 +32,9 @@ public class TestController {
     public String test3(){
         return "...........fuck ccccccc      uuuuuuuuu..................................................................................welcome";
     }
+
+    @GetMapping("dd")
+    public String test4(){
+        return "...........fuck 最新的 啊啊  操！！！！！！！！！！！！！！      uuuuuuuuu..................................................................................welcome";
+    }
 }
