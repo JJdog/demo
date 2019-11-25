@@ -21,11 +21,15 @@ public class TestController {
 
     @GetMapping("aa")
     public String test1(){
-        return "...........fuck       uuuuuuuuu..................................................................................welcome";
+        return "...........fuck   aaa    uuuuuuuuu..................................................................................welcome";
     }
 
     @GetMapping("bb")
     public String test2(){
         return "...........fuck bbbbb       uuuuuuuuu..................................................................................welcome";
+    }
+    @GetMapping("cc")
+    public String test3(){
+        return "...........fuck ccccccc      uuuuuuuuu..................................................................................welcome";
     }
 }
