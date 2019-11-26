@@ -45,6 +45,7 @@
         <jar>${project.build.finalName}.jar</jar>
     </properties>
 
+    <serverId>docker-jaswine</serverId>
 
     <build>
         <plugins>
@@ -52,7 +53,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-
                     <plugin>
                         <groupId>com.spotify</groupId>
                         <artifactId>dockerfile-maven-plugin</artifactId>
@@ -62,7 +62,7 @@
                                 <id>default</id>
                                 <goals>
                                     <goal>build</goal>
-                                    <!--<goal>push</goal>-->
+                                    <goal>push</goal>
                                 </goals>
                             </execution>
                         </executions>
@@ -75,7 +75,6 @@
                             <buildArgs>
                                 <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
                             </buildArgs>
-                            <!--<serverId>docker-aliyun</serverId>-->
                             <!--<pushImage>true</pushImage>-->
                        <dockerfile>Dockerfile</dockerfile>
 
