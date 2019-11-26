@@ -15,9 +15,9 @@ WORKDIR /home/
 RUN mkdir zsw
 # pom文件里的参数
 ARG JAR_FILE
-ARG aaa
-# jenkins打好的包 复制到 容器内
+
+# jenkins打好的包 复制到 容器内,名称随便取
 COPY ${JAR_FILE}  demo.jar
 
-#启动jar
+#启动上一步复制的jar
 ENTRYPOINT ["java","-jar", "./demo.jar"]
