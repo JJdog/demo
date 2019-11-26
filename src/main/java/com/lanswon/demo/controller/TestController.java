@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
 /**
  * @Description
  * @Author zsw
@@ -36,5 +38,10 @@ public class TestController {
     @GetMapping("dd")
     public String test4(){
         return "...........fuck 最新的 啊啊  操！！！！！！！！！！！！！！      uuuuuuuuu..................................................................................welcome";
+    }
+
+    @GetMapping("gg")
+    public String test5(){
+        return "当前时间..........."+new Date();
     }
 }
