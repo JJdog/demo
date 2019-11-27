@@ -44,4 +44,10 @@ public class TestController {
     public String test5(){
         return "当前时间..........."+new Date();
     }
+
+
+    @GetMapping("ff")
+    public String test6(){
+        return "最后测试，后面不玩了--》当前时间..........."+new Date();
+    }
 }
