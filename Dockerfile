@@ -1,7 +1,7 @@
 # CentOS with JDK 8
 # centos作为基础镜像
 # https://hub.docker.com/_/centos?tab=tags 查询版本 ，不加版本就是最新的版本
-FROM registry.cn-shanghai.aliyuncs.com/zhangsw/centos-java:7.4-jdk8u171
+FROM centos
 
 # 维护者虚拟机开机黑屏
 MAINTAINER  zsw
